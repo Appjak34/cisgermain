@@ -6,14 +6,16 @@
       [rotation]="0"
       [original-size]="false"
       [show-all]="true"
-      [fit-to-page]="false"
+      [fit-to-page]="true"
       [zoom]="1"
       [zoom-scale]="'page-width'"
       [stick-to-page]="false"
       [render-text]="true"
       [external-link-target]="'blank'"
       [autoresize]="true"
-      [show-borders]="false"
+      [show-borders]="true"
+      (after-load-complete)="loadComplete()"
+      (error)="loadComplete()"
       style="width: 100%; "
     ></pdf-viewer>
   </div>
