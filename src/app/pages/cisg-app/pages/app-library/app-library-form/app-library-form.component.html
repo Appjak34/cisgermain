@@ -1,0 +1,115 @@
+<div class="bg-white pb-6 mt-20 sm:pb-8 lg:pb-12">
+
+
+  <div class="max-w-screen-2xl  mx-auto">
+    <ea-title title="Agregar libro"></ea-title>
+  </div>
+
+  <div class="grid sm:grid-cols-2 sm:gap-14">
+
+    <div class="w-full  mx-auto">
+
+      <!-- form - start -->
+      <form class="max-w-screen-md mx-auto">
+
+        <div class="pt-2">
+          <label for="name" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Nombre*</label>
+          <input name="name" id="name"
+                 [(ngModel)]="book.name"
+                 class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2"/>
+        </div>
+
+        <div class="pt-2">
+          <label for="educational_services" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Servicio
+            Educativo*</label>
+          <select id="educational_services"
+                  [(ngModel)]="book.educational_service"
+                  name="educationalService"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option *ngFor="let item of list$|async" [ngValue]="item">{{item.name}}</option>
+
+          </select>
+        </div>
+
+        <div class="pt-2">
+          <label for="url_img" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Imagen de portada
+            URL</label>
+          <input placeholder="https://www.direccion-web.ejemplo/imagen_portada.jpg" name="url_img" id="url_img"
+                 [(ngModel)]="book.url_img"
+                 class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2"/>
+        </div>
+
+        <div class="pt-2">
+
+          <label for="file" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Libro PDF*</label>
+
+          <file-upload  [(ngModel)]="uploadedFiles" [control]="fileUploadControl" id="file" name="file">
+            <ng-template let-isFileDragDropAvailable="isFileDragDropAvailable" #placeholder>
+              <file-upload-drop-zone>
+                Suelte un <b>libro PDF</b><br> o de click.
+
+              </file-upload-drop-zone>
+            </ng-template>
+
+            <ng-template let-i="index" let-file="file" let-control="control" #item>
+              <file-upload-list-item [index]="i" [file]="file" [control]="control">Eliminar</file-upload-list-item>
+            </ng-template>
+          </file-upload>
+        </div>
+
+        <div class=" flex justify-between items-center">
+          <span class="text-gray-500 text-sm">* Campos requeridos</span>
+        </div>
+
+      </form>
+      <!-- form - end -->
+    </div>
+
+    <div class="max-sm:mt-8 mx-auto grid-rows-2 w-full">
+      <div class="relative p-10 flex justify-center">
+        <!-- https://m.media-amazon.com/images/I/71Qe2yIBFmL.jpg  -->
+        <div
+          [style.background]="'url('+ urlImgSelected + ' )'"
+          class="absolute blur-lg top-0 left-0 right-0 bottom-0 w-90% h-full  bg-cover bg-center mx-auto">
+          <div class="w-full h-full flex flex-col justify-center items-center backdrop-blur-lg">
+          </div>
+        </div>
+
+        <div class=" inline-block mx-auto">
+
+
+          <div
+            class=" group h-96 flex items-end bg-gray-100 rounded-lg overflow-hidden shadow-lg relative p-4">
+            <img
+              [src]="urlImgSelected"
+              loading="lazy" alt="Imagen de portada"
+              class="w-full  h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"/>
+
+            <div
+              class=" max-w-xs w-full flex flex-wrap bg-white text-center rounded-lg relative p-2 sm:p-4 min-w-[12rem] sm:min-w-[14rem] sm:min-h-[90px] min-h-[70px]">
+
+              <ng-container *ngIf="book.educational_service; else educationalServiceName">
+                <div class="w-full text-gray-500 truncate">{{book.educational_service.name}}</div>
+              </ng-container>
+              <ng-template #educationalServiceName>
+                <div class="w-full text-gray-500">-</div>
+              </ng-template>
+              <span class="w-full text-gray-800 text-lg lg:text-xl font-bold">{{book.name}}</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="w-full pt-4">
+
+        <a class="btn " (click)="upload()">Subir</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+</div>

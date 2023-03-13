@@ -1,0 +1,14 @@
+<div class="overflow-hidden">
+
+  <ea-app-nav></ea-app-nav>
+
+  <ea-app-side-bar></ea-app-side-bar>
+
+
+  <div class="transition-transform px-4 " [ngClass]="{'max-sm:translate-x-64 sm:ml-64 overflow-hidden': isOpenNav}">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
+
+<ea-loader></ea-loader>
