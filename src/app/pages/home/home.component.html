@@ -1,5 +1,4 @@
-<aside
-  [class.translate-x-0]="navOpen"
+<aside [class.translate-x-0]="navOpen"
   class="fixed top-0 left-0 z-40 w-full h-full transition-transform -translate-x-full  pr-[25%]">
   <div class="h-full overflow-hidden bg-primary">
     <ul class="flex space-y-10 flex-col justify-center h-full text-left px-10">
@@ -20,7 +19,7 @@
 
 
   <!-- HOME -->
-  <section class="relative h-full overflow-hidden sm:hidden">
+  <section class="relative full-screen overflow-hidden sm:hidden">
     <div class=" absolute top-0 right-0 left-0 bottom-0 w-full h-full z-0 flex justify-center items-center">
       <div class="video_logo w-32 animate-bounce">
         <img src="assets/LOGO.svg" alt="">
@@ -36,16 +35,19 @@
     <div class="absolute right-0 left-0 bottom-10 w-full z-30">
 
       <div class="flex space-x-4 justify-center ">
-        <a href="https://www.facebook.com/cisophiegermain?mibextid=ZbWKwL" class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i
-          class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://instagram.com/ci.sophiegermain?igshid=YmMyMTA2M2Y=" class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i
-          class="fa-brands fa-instagram"></i></a>
-        <div class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i class="fa-brands fa-twitter"></i></div>
+        <a href="https://www.facebook.com/cisophiegermain?mibextid=ZbWKwL"
+          class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i
+            class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://instagram.com/ci.sophiegermain?igshid=YmMyMTA2M2Y="
+          class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i
+            class="fa-brands fa-instagram"></i></a>
+        <div class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i
+            class="fa-brands fa-twitter"></i></div>
       </div>
 
     </div>
   </section>
-  <section class="relative h-full overflow-hidden invisible sm:visible bg-portada bg-cover  bg-center">
+  <section class="relative full-screen overflow-hidden hidden sm:block bg-portada bg-cover  bg-center">
 
     <div class="flex items-center h-full px-8">
       <div class="icon">
@@ -57,11 +59,14 @@
     <div class="absolute right-0 left-0 bottom-10 w-full z-30">
 
       <div class="flex space-x-4 justify-center ">
-        <a href="https://www.facebook.com/cisophiegermain?mibextid=ZbWKwL" class="flex justify-center items-center p-2 w-12 h-12 md:w-22 md:h-22 bg-primary rounded-full text-white text-3xl"><i
-          class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://instagram.com/ci.sophiegermain?igshid=YmMyMTA2M2Y=" class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i
-          class="fa-brands fa-instagram"></i></a>
-        <div class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i class="fa-brands fa-twitter"></i></div>
+        <a href="https://www.facebook.com/cisophiegermain?mibextid=ZbWKwL"
+          class="flex justify-center items-center p-2 w-12 h-12 md:w-22 md:h-22 bg-primary rounded-full text-white text-3xl"><i
+            class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://instagram.com/ci.sophiegermain?igshid=YmMyMTA2M2Y="
+          class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i
+            class="fa-brands fa-instagram"></i></a>
+        <div class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i
+            class="fa-brands fa-twitter"></i></div>
       </div>
 
     </div>
@@ -69,122 +74,140 @@
 
   <!-- HOME -->
   <!-- INICIO -->
-  <section class="relative min-h-full overflow-hidden  bg-primary " #inicio>
+  <section class="relative full-screen overflow-hidden bg-primary pt-16 lg:pt-32 space-y-6 lg:space-y-20" #inicio>
 
-    <div class="md:overflow-hidden md:h-96 md:mb-20">
-      <img
-        class="jarallax-img object-cover" src="assets/portada-1.png" alt="">
+    <div class="overflow-hidden h-1/3 lg:h-2/5">
+      <img class="jarallax-img object-cover" src="assets/portada-1.png" alt="">
     </div>
 
-    <div
+    <div class="px-10 text-justify font-light text-base xl:text-lg text-white flex flex-col gap-6 lg:items-center">
+      <p class="lg:max-w-[50%]">
+        En Centro Integral Sophie Germain S.C., tenemos experiencia de más de 15 años (2008) ofrecemos servicios
+        educativos de nivel Bachillerato, Superior y posgrados, en la región centro del Estado de
+        Puebla.
+      </p>
 
-      class="container mx-auto px-8 text-justify font-light text-lg text-white md:text-2xl md:pb-20 ">
-      En Centro Integral Sophie Germain S.C., tenemos experiencia de más de 15 años (2008) ofrecemos servicios educativos de nivel Bachillerato, Superior y posgrados, en la región centro del Estado de
-      Puebla.
-      <br>
-      <br>
-
-      En Centro Integral Sophie Germain S.C., nos manifestamos como una organización integrada y formada por profesionistas y empresarias poblanas, dispuestas y comprometidas a realizar su aportación
-      a la sociedad con gran sentido ético, corresponsabilidad social, así como visión de transformar seres humanos a través de una educación de calidad.
+      <p class="lg:max-w-[50%]">
+        En Centro Integral Sophie Germain S.C., nos manifestamos como una organización integrada y formada por
+        profesionistas y empresarias poblanas, dispuestas y comprometidas a realizar su aportación
+        a la sociedad con gran sentido ético, corresponsabilidad social, así como visión de transformar seres humanos a
+        través de una educación de calidad.
+      </p>
     </div>
 
   </section>
   <!-- QUIENES SOMOS -->
-  <section class="relative  bg-white  " id="js-target" #nosotros>
+  <section class="relative full-screen bg-white md:flex md:flex-row-reverse" id="js-target" #nosotros>
 
-    <div
-      class="bg-white">
-      <img src="assets/p-2.png" alt="">
+    <div class="bg-white h-1/2 md:h-full md:w-3/5">
+      <img class="object-fill min-h-full" src="assets/p-2.png" alt="">
     </div>
 
-    <div
-      class="text-primary text-7xl  font-bold text-center font-geometry">
-      ¿Quienes somos?
-    </div>
+    <div class="h-1/2 md:h-full md:w-2/5 md:flex md:flex-col md:items-center md:justify-center">
 
-    <div
+      <div class="text-primary text-6xl md:text-6xl xl:text-8xl font-bold text-center font-geometry">
+        ¿Quienes somos?
+      </div>
 
-      class="container mx-auto text-justify py-10 px-8 text-lg text-primary ">
-      Centro Integral Sophie Germain S.C., es un centro educativo que nace bajo la necesidad de tener una institución de nivel medio superior en la región de Puebla, por tanto, en el año de 2008 se
-      fundó con el aval de la SEP-Puebla.
-      <br>
-      <br>
-      Por otra parte, a partir del 2023 estamos sumándonos al papel de la Educación Superior y posgrados, que es formar a los mexicanos que enlacen de manera inteligente y exitosa a nuestro país con
-      el resto del mundo en todos los aspectos de su complejidad y propicien el desarrollo nacional en todas sus vertientes.
+      <div class="text-justify py-2 md:py-6 px-8 lg:px-12 text-sm lg:text-base text-primary space-y-4">
+        <p>
+          Centro Integral Sophie Germain S.C., es un centro educativo que nace bajo la necesidad de tener una
+          institución
+          de
+          nivel medio superior en la región de Puebla, por tanto, en el año de 2008 se
+          fundó con el aval de la SEP-Puebla.
+        </p>
+        <p>
+          Por otra parte, a partir del 2023 estamos sumándonos al papel de la Educación Superior y posgrados, que es
+          formar
+          a los mexicanos que enlacen de manera inteligente y exitosa a nuestro país con
+          el resto del mundo en todos los aspectos de su complejidad y propicien el desarrollo nacional en todas sus
+          vertientes.
+        </p>
+      </div>
     </div>
 
   </section>
   <!-- FILOSOFIA -->
-  <section class="relative" #filosofia>
-    <div
-      class="text-primary text-7xl  font-bold text-left px-4 font-geometry">
-      Filosofía
+  <section class="relative full-screen bg-white flex flex-col md:flex-row" #filosofia>
+
+    <div class="py-8 px-8 space-y-4 md:w-1/2 md:flex md:flex-col md:items-center md:justify-center">
+      <h2 class="text-primary text-6xl md:text-6xl xl:text-8xl font-bold font-geometry">
+        Filosofía
+      </h2>
+
+      <p class="text-justify py-2 md:py-6 text-sm lg:text-base text-primary space-y-4">
+        Para esta “Generación del Conocimiento”, como es reconocida en el medio pedagógico, a los alumnos que formarán
+        parte de las futuras generaciones de mexicanos, consideramos como nuestros
+        principios básicos al “Aprender a Ser”, el “Aprender a Conocer”, el “Aprender a Hacer” y el “Aprender a vivir
+        juntos”, conocidos como los cuatro pilares de la educación
+      </p>
     </div>
 
-    <div
 
-      class="container mx-auto text-justify py-10 px-8 text-lg text-primary ">
-      Para esta “Generación del Conocimiento”, como es reconocida en el medio pedagógico, a los alumnos que formarán parte de las futuras generaciones de mexicanos, consideramos como nuestros
-      principios básicos al “Aprender a Ser”, el “Aprender a Conocer”, el “Aprender a Hacer” y el “Aprender a vivir juntos”, conocidos como los cuatro pilares de la educación
-    </div>
+    <div class="px-8 flex items-center w-full md:w-1/2 h-full md:flex md:items-center">
+      <div class="bg-primary w-full rounded-2xl p-4 overflow-hidden">
 
+        <swiper class="h-[95%] cursor-move" [slidesPerView]="1" [spaceBetween]="10" [centeredSlides]="true">
 
-    <div class="relative px-8 flex items-center">
-
-      <swiper
-
-        [slidesPerView]="1"
-        [spaceBetween]="10"
-        [centeredSlides] ="true"
-         class=" carousel aspect-w-16 aspect-h-9 relative ">
-
-
-        <ng-template swiperSlide class="rounded-lg overflow-scroll max-h-[400px] ">
-          <div class="rounded-xl bg-primary text-white pt-14  px-8">
-            <div class="title text-2xl text-left pb-2">MISIÓN</div>
-            <div class="text-justify">Somos una institución educativa de nivel superior organizada para contribuir al desarrollo integral de las personas, graduando a estudiantes en nivel medio
-              superior,
-              y a
-              profesionistas en el nivel superior y posgrados brindando un servicio de alta calidad a bajo costo.
+          <ng-template swiperSlide class="rounded-lg  ">
+            <div class="rounded-xl bg-primary text-white pt-14  px-8">
+              <div class="title text-2xl text-left pb-2">MISIÓN</div>
+              <div class="text-justify">Somos una institución educativa de nivel superior organizada para contribuir al
+                desarrollo integral de las personas, graduando a estudiantes en nivel medio
+                superior,
+                y a
+                profesionistas en el nivel superior y posgrados brindando un servicio de alta calidad a bajo costo.
+              </div>
             </div>
-          </div>
 
-        </ng-template>
-        <ng-template swiperSlide class="rounded-lg overflow-scroll max-h-[400px]">
-          <div class="rounded-xl bg-primary text-white pt-14 px-8">
-            <div class="title text-2xl text-left pb-2">VISIÓN</div>
-            <div class="text-justify">Consolidar a nuestra institución educativa como una organización dedicada a la formación académica de profesionistas con un alto nivel competitivo. Facilitando el
-              acceso a la formación académica debidamente estructurada, con asesorías personalizadas y horarios flexibles. Buscamos que los alumnos encuentren apoyo en el transcurso del aprendizaje y
-              que en este proceso creen sentido de servicio a la sociedad.
+          </ng-template>
+          <ng-template swiperSlide class="rounded-lg ">
+            <div class="rounded-xl bg-primary text-white pt-14 px-8">
+              <div class="title text-2xl text-left pb-2">VISIÓN</div>
+              <div class="text-justify">Consolidar a nuestra institución educativa como una organización dedicada a la
+                formación académica de profesionistas con un alto nivel competitivo. Facilitando el
+                acceso a la formación académica debidamente estructurada, con asesorías personalizadas y horarios
+                flexibles. Buscamos que los alumnos encuentren apoyo en el transcurso del aprendizaje y
+                que en este proceso creen sentido de servicio a la sociedad.
+              </div>
             </div>
-          </div>
-        </ng-template>
-        <ng-template swiperSlide class="rounded-lg overflow-scroll max-h-[400px]">
-          <div class="rounded-xl bg-primary text-white pt-14  px-8">
-            <div class="title text-2xl text-left pb-2">VALORES</div>
-            <div class="text-justify overflow-scroll">
-              El Centro Integral Sophie Germain S.C. promueve valores (cualidad o conjunto de cualidades de una persona, por cuya virtud es apreciada), siendo éstos:
-              -Profesionalismo: asumida como la capacidad de responder ante los retos constantes del mercado laboral.
-              -Responsabilidad: entendida como el reconocimiento y la capacidad de asumir consecuencias en la resolución de problemas.
-              -Vocación: capacidad de identificar mis talentos y competencias para ponerlas al servicio de la sociedad y de mi profesión.
-              -Tolerancia: asumir con respeto las creencias, ideas y prácticas del otro.
-              -No discriminación; la garantía de igualdad entre seres humanos.
+          </ng-template>
+          <ng-template swiperSlide class="rounded-lg ">
+            <div class="rounded-xl bg-primary text-white pt-14  px-8">
+              <div class="title text-2xl text-left pb-2">VALORES</div>
+              <div class="text-justify overflow-scroll">
+                El Centro Integral Sophie Germain S.C. promueve valores (cualidad o conjunto de cualidades de una
+                persona,
+                por cuya virtud es apreciada), siendo éstos:
+                -Profesionalismo: asumida como la capacidad de responder ante los retos constantes del mercado laboral.
+                -Responsabilidad: entendida como el reconocimiento y la capacidad de asumir consecuencias en la
+                resolución
+                de problemas.
+                -Vocación: capacidad de identificar mis talentos y competencias para ponerlas al servicio de la sociedad
+                y
+                de mi profesión.
+                -Tolerancia: asumir con respeto las creencias, ideas y prácticas del otro.
+                -No discriminación; la garantía de igualdad entre seres humanos.
 
+              </div>
             </div>
-          </div>
-        </ng-template>
-        <ng-template swiperSlide class="rounded-lg overflow-scroll max-h-[400px]">
-          <div class="rounded-xl bg-primary text-white pt-14  px-8">
-            <div class="title text-2xl text-left pb-2">POLITICA DE CALIDAD</div>
-            <div class="text-justify">
-              Trabajamos con procesos soportados por personal directivo, docente y administrativo ampliamente calificados, comprometidos con la calidad y cultura de legalidad para lograr la
-              satisfacción de usuarios mediante la mejora continua de los servicios.
+          </ng-template>
+          <ng-template swiperSlide class="rounded-lg ">
+            <div class="rounded-xl bg-primary text-white pt-14  px-8">
+              <div class="title text-2xl text-left pb-2">POLITICA DE CALIDAD</div>
+              <div class="text-justify">
+                Trabajamos con procesos soportados por personal directivo, docente y administrativo ampliamente
+                calificados, comprometidos con la calidad y cultura de legalidad para lograr la
+                satisfacción de usuarios mediante la mejora continua de los servicios.
+              </div>
             </div>
-          </div>
-        </ng-template>
+          </ng-template>
 
-      </swiper>
-      <div class="absolute top-1/2 left-0">
+        </swiper>
+      </div>
+
+      <!-- <div class="absolute top-1/2 left-0">
         <div class="arrow animate-r bounce_right">
           <i class="fa-solid fa-chevron-left text-primary text-5xl"></i>
         </div>
@@ -194,7 +217,7 @@
         <div class="arrow animate-l bounce_left">
           <i class="fa-solid fa-chevron-right text-primary text-5xl"></i>
         </div>
-      </div>
+      </div> -->
 
 
     </div>
@@ -202,8 +225,7 @@
   </section>
   <!-- OFERTA  -->
   <section class="h-full" #oferta>
-    <swiper [slidesPerView]="1"
-            [navigation]="true" class="h-full">
+    <swiper [slidesPerView]="1" [navigation]="true" class="h-full">
       <ng-template swiperSlide>
         <ea-oferta [bg_img]="'bg-img-conta'" [img_title]="'lic_conta.svg'"></ea-oferta>
       </ng-template>
@@ -233,27 +255,33 @@
         <i class="fa-solid fa-chevron-right text-primary text-5xl"></i>
       </div>
     </div>
-    <swiper [slidesPerView]="1"
-            [spaceBetween]="20"
-            [navigation]="true" class=" carousel aspect-w-16 aspect-h-9 relative ">
+    <swiper [slidesPerView]="1" [spaceBetween]="20" [navigation]="true"
+      class=" carousel aspect-w-16 aspect-h-9 relative ">
       <ng-template swiperSlide>
         <div class="">
           <div class="flex w-full justify-between py-8 ">
             <div class="flex flex-col w-22 items-center">
-              <div class=" bg-red-logo text-white w-6 h-6 border rounded-full flex items-center justify-center text-xs">1</div>
+              <div class=" bg-red-logo text-white w-6 h-6 border rounded-full flex items-center justify-center text-xs">
+                1</div>
               <div class="text-primary text-sm">Estudiantiles</div>
             </div>
 
             <div class="flex flex-col w-22 items-center">
-              <div class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">2</div>
+              <div
+                class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">
+                2</div>
               <div class="text-secondary text-sm">Académicos</div>
             </div>
             <div class="flex flex-col w-22 items-center">
-              <div class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">3</div>
+              <div
+                class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">
+                3</div>
               <div class="text-secondary text-sm">Vinculación</div>
             </div>
             <div class="flex flex-col w-22 items-center">
-              <div class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">4</div>
+              <div
+                class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">
+                4</div>
               <div class="text-secondary text-sm">Becas</div>
             </div>
 
@@ -263,16 +291,19 @@
 
             <div class="py-10 px-4 text-white text-justify text-sm">
               Psicología: <br>
-              Contamos con un área de psicología para proporcionar la atención necesaria a alumnos que lo requieran, fomentando así la salud mental dentro de nuestra institución.
+              Contamos con un área de psicología para proporcionar la atención necesaria a alumnos que lo requieran,
+              fomentando así la salud mental dentro de nuestra institución.
               <br>
               <br>
               Trabajo Social: <br>
-              En el área de Trabajo Social se proporciona atención directa a nuestra comunidad para prevenir conflictos tanto individuales como colectivos, así como la colaboración en distintas
+              En el área de Trabajo Social se proporciona atención directa a nuestra comunidad para prevenir conflictos
+              tanto individuales como colectivos, así como la colaboración en distintas
               actividades en pro de los estudiantes.
               <br>
               <br>
               Tutoría: <br>
-              Nos encargamos de asignar tutores para nuestra comunidad estudiantil que permitan tener un acompañamiento individualizado durante toda la carrera universitaria de nuestros alumnos.
+              Nos encargamos de asignar tutores para nuestra comunidad estudiantil que permitan tener un acompañamiento
+              individualizado durante toda la carrera universitaria de nuestros alumnos.
 
             </div>
 
@@ -283,20 +314,27 @@
         <div class="">
           <div class="flex w-full justify-between py-8 ">
             <div class="flex flex-col w-22 items-center">
-              <div class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">1</div>
+              <div
+                class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">
+                1</div>
               <div class="text-secondary text-sm">Estudiantiles</div>
             </div>
 
             <div class="flex flex-col w-22 items-center">
-              <div class=" bg-red-logo text-white w-6 h-6 border rounded-full flex items-center justify-center text-xs">2</div>
+              <div class=" bg-red-logo text-white w-6 h-6 border rounded-full flex items-center justify-center text-xs">
+                2</div>
               <div class="text-primary text-sm">Académicos</div>
             </div>
             <div class="flex flex-col w-22 items-center">
-              <div class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">3</div>
+              <div
+                class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">
+                3</div>
               <div class="text-secondary text-sm">Vinculación</div>
             </div>
             <div class="flex flex-col w-22 items-center">
-              <div class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">4</div>
+              <div
+                class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">
+                4</div>
               <div class="text-secondary text-sm">Becas</div>
             </div>
 
@@ -306,11 +344,13 @@
 
             <div class="py-10 px-4 text-white text-justify text-sm">
               Calificaciones en línea: <br>
-              Nuestro servicio administrativo de alta calidad hace posible que los estudiantes puedan revisar sus calificaciones a través de nuestra plataforma virtual.
+              Nuestro servicio administrativo de alta calidad hace posible que los estudiantes puedan revisar sus
+              calificaciones a través de nuestra plataforma virtual.
               <br>
               <br>
               Estados Financieros: <br>
-              Cada uno de los alumnos puede revisar todo lo referente a sus pagos dentro de su cuenta personalizada en nuestra plataforma virtual.
+              Cada uno de los alumnos puede revisar todo lo referente a sus pagos dentro de su cuenta personalizada en
+              nuestra plataforma virtual.
               <br>
               <br>
               Biblioteca: <br>
@@ -324,20 +364,27 @@
         <div class="">
           <div class="flex w-full justify-between py-8 ">
             <div class="flex flex-col w-22 items-center">
-              <div class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">1</div>
+              <div
+                class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">
+                1</div>
               <div class="text-secondary text-sm">Estudiantiles</div>
             </div>
 
             <div class="flex flex-col w-22 items-center">
-              <div class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">2</div>
+              <div
+                class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">
+                2</div>
               <div class="text-secondary text-sm">Académicos</div>
             </div>
             <div class="flex flex-col w-22 items-center">
-              <div class=" bg-red-logo text-white w-6 h-6 border rounded-full flex items-center justify-center text-xs">3</div>
+              <div class=" bg-red-logo text-white w-6 h-6 border rounded-full flex items-center justify-center text-xs">
+                3</div>
               <div class="text-primary text-sm">Vinculación</div>
             </div>
             <div class="flex flex-col w-22 items-center">
-              <div class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">4</div>
+              <div
+                class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">
+                4</div>
               <div class="text-secondary text-sm">Becas</div>
             </div>
 
@@ -346,10 +393,14 @@
           <div class="bg-primary rounded-xl ">
 
             <div class="py-10 px-4 text-white text-justify text-sm">
-              El proceso de vinculación será un área de especial interés que permitirá, además de diversos escenarios para las residencias profesionales de nuestros estudiantes, la generación de
-              proyectos de inversión, la creación de empresas y una estrecha colaboración con el sector productivo en ámbitos tales como la consultoría empresarial, la capacitación para y en el
-              trabajo, el desarrollo de proyectos de innovación y prototipos orientados al soporte tecnológico de la industria. En una palabra, que la educación en nuestra Universidad sea pertinente,
-              creando convenios que permitan al alumnado realizar su Servicio Social y sus Prácticas profesionales de manera eficiente.
+              El proceso de vinculación será un área de especial interés que permitirá, además de diversos escenarios
+              para las residencias profesionales de nuestros estudiantes, la generación de
+              proyectos de inversión, la creación de empresas y una estrecha colaboración con el sector productivo en
+              ámbitos tales como la consultoría empresarial, la capacitación para y en el
+              trabajo, el desarrollo de proyectos de innovación y prototipos orientados al soporte tecnológico de la
+              industria. En una palabra, que la educación en nuestra Universidad sea pertinente,
+              creando convenios que permitan al alumnado realizar su Servicio Social y sus Prácticas profesionales de
+              manera eficiente.
             </div>
 
           </div>
@@ -359,20 +410,27 @@
         <div class="">
           <div class="flex w-full justify-between py-8 ">
             <div class="flex flex-col w-22 items-center">
-              <div class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">1</div>
+              <div
+                class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">
+                1</div>
               <div class="text-secondary text-sm">Estudiantiles</div>
             </div>
 
             <div class="flex flex-col w-22 items-center">
-              <div class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">2</div>
+              <div
+                class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">
+                2</div>
               <div class="text-secondary text-sm">Académicos</div>
             </div>
             <div class="flex flex-col w-22 items-center">
-              <div class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">3</div>
+              <div
+                class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">
+                3</div>
               <div class="text-secondary text-sm">Vinculación</div>
             </div>
             <div class="flex flex-col w-22 items-center">
-              <div class=" bg-red-logo text-white w-6 h-6 border rounded-full flex items-center justify-center text-xs">4</div>
+              <div class=" bg-red-logo text-white w-6 h-6 border rounded-full flex items-center justify-center text-xs">
+                4</div>
               <div class="text-primary text-sm">Becas</div>
             </div>
           </div>
@@ -383,14 +441,17 @@
               Requisitos: <br>
               Llenar formato de beca vigente y pegar fotografía reciente tamaño infantil en el mismo.
               Pagar la inscripción antes de entregar la documentación correspondiente.
-              Para licenciatura, copia de certificado del bachillerato, en caso de no tenerlo, presentar una constancia de estudios con calificaciones de los seis semestres del bachillerato con
+              Para licenciatura, copia de certificado del bachillerato, en caso de no tenerlo, presentar una constancia
+              de estudios con calificaciones de los seis semestres del bachillerato con
               validez oficial, es decir, en hoja membretada y con el sello de la escuela de procedencia.
               Para posgrado, copia del certificado de licenciatura.
-              Promedio mínimo general del bachillerato para licenciatura o la licenciatura para posgrado, de ocho punto cinco (8.5).
+              Promedio mínimo general del bachillerato para licenciatura o la licenciatura para posgrado, de ocho punto
+              cinco (8.5).
               Constancia reciente de ingresos (la cual será́ máximo de un mes anterior a la entrega de la solicitud).
               Comprobante de domicilio actual (del mes en que se entrega la solicitud o el inmediato anterior).
               Copia de la Clave Única de Registro de Población (CURP).
-              Presentar la solicitud de beca en los términos y plazos establecidos en la convocatoria emitida por la universidad y anexar la documentación comprobatoria que se señale en la misma.
+              Presentar la solicitud de beca en los términos y plazos establecidos en la convocatoria emitida por la
+              universidad y anexar la documentación comprobatoria que se señale en la misma.
 
             </div>
 
@@ -405,31 +466,36 @@
   </section>
 
   <!-- Contactanos -->
-  <section class="h-full relative bg-img-contact bg-cover bg-center flex items-center justify-center overflow-hidden" #contacto>
+  <section class="h-full relative bg-img-contact bg-cover bg-center flex items-center justify-center overflow-hidden"
+    #contacto>
     <div class="z-0 absolute top-0 left-0 right-0 bottom-0 bg-primary opacity-70 "></div>
 
     <div class="font-geometry text-2xl z-10 text-white pb-10">Que esperas para contactarnos!!</div>
 
     <div class="z-10 absolute bottom-0 left-0 right-0 w-full">
-      <svg class="w-full|" width="750" height="287" viewBox="0 0 750 287" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="w-full|" width="750" height="287" viewBox="0 0 750 287" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
         <path
           d="M1618.83 248.629L1620.1 0.989258C1256.34 178.189 821.8 61.6992 513.09 31.7292C146.55 -3.85075 41.8299 143.199 -449.57 119.489C-614.36 111.539 -729.39 86.5392 -809.59 56.8192V248.629C-809.59 266.389 -786.67 280.929 -758.66 280.929H1567.9C1595.91 280.929 1618.83 266.389 1618.83 248.629Z"
-          fill="#93C8FD"/>
+          fill="#93C8FD" />
         <path
           d="M-809.6 272.349V25.9795C-445.84 203.179 -12.5601 85.4195 296.15 55.4595C662.69 19.8795 767.41 166.929 1258.81 143.219C1423.6 135.269 1539.9 109 1620.09 79.2896L1618.82 272.37C1618.82 290.13 1595.9 304.67 1567.89 304.67H-758.66C-786.67 304.67 -809.59 290.13 -809.59 272.37L-809.6 272.349Z"
-          fill="#FF0000"/>
+          fill="#FF0000" />
         <path
           d="M1620.09 309.099V59.5293C1256.33 236.729 821.79 120.239 513.08 90.2693C146.54 54.6893 41.8199 201.739 -449.58 178.029C-614.36 170.079 -729.4 145.079 -809.59 115.359V309.099C-809.59 309.099 1620.1 308.489 1620.1 309.099H1620.09Z"
-          fill="white"/>
+          fill="white" />
       </svg>
       <div class="absolute right-0 left-0 bottom-10 w-full z-30">
 
         <div class="flex space-x-4 justify-center ">
-          <a href="https://www.facebook.com/cisophiegermain?mibextid=ZbWKwL" class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i
-            class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://instagram.com/ci.sophiegermain?igshid=YmMyMTA2M2Y=" class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i
-            class="fa-brands fa-instagram"></i></a>
-          <div class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i class="fa-brands fa-twitter"></i></div>
+          <a href="https://www.facebook.com/cisophiegermain?mibextid=ZbWKwL"
+            class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i
+              class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com/ci.sophiegermain?igshid=YmMyMTA2M2Y="
+            class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i
+              class="fa-brands fa-instagram"></i></a>
+          <div class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i
+              class="fa-brands fa-twitter"></i></div>
         </div>
 
       </div>
@@ -438,7 +504,8 @@
   </section>
 
 
-  <div (click)="open()" class="floating-btn fixed w-12 h-12 rounded bg-red-logo z-40 top-0 right-0 m-2 flex justify-center items-center">
+  <div (click)="open()"
+    class="floating-btn fixed w-12 h-12 rounded bg-red-logo z-40 top-0 right-0 m-2 flex justify-center items-center">
     <i class="fa-duotone fa-bars text-3xl text-white"></i>
   </div>
 

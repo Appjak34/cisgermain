@@ -4,32 +4,30 @@
 @tailwind utilities;
 
 /*  FONT */
-@import url('https://fonts.cdnfonts.com/css/masque');
-@import url('https://fonts.cdnfonts.com/css/poppins');
+@import url("https://fonts.cdnfonts.com/css/masque");
+@import url("https://fonts.cdnfonts.com/css/poppins");
 @layer base {
   @font-face {
-    font-family: 'Basique';
-    src: local('Basique Pro Regular'), local('Basique-Pro-Regular'),
-    url('./assets/fonts/Basique_3.ttf') format('truetype');
+    font-family: "Basique";
+    src: local("Basique Pro Regular"), local("Basique-Pro-Regular"),
+      url("./assets/fonts/Basique_3.ttf") format("truetype");
   }
 
   @font-face {
-    font-family: 'Geometry';
-    src: local('Geometry'), local('Geometry'),
-    url('./assets/fonts/Geometry.ttf') format('truetype');
+    font-family: "Geometry";
+    src: local("Geometry"), local("Geometry"),
+      url("./assets/fonts/Geometry.ttf") format("truetype");
   }
 }
 
-
-
-
 body {
-  font-family: 'Basique';
+  font-family: "Basique";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -52,21 +50,15 @@ html, body {
 
 /* HOME */
 
-
 /*  BOTONES */
 
 a.btn {
-
-
   @apply block  rounded-lg outline-none transition duration-100 px-8 py-3 text-center text-sm md:text-base font-semibold transition duration-100 bg-primary hover:bg-blue-300 focus-visible:ring ring-blue-300 text-white;
 
   &.disabled {
     @apply bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700;
   }
-
-
 }
-
 
 .arrow {
   text-align: center;
@@ -84,7 +76,11 @@ a.btn {
 }
 
 @keyframes bounce_right {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateX(0);
   }
   40% {
@@ -95,7 +91,11 @@ a.btn {
   }
 }
 @keyframes bounce_left {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateX(0);
   }
   40% {
@@ -106,4 +106,7 @@ a.btn {
   }
 }
 
-
+.full-screen {
+  height: 100vh;
+  height: 100svh;
+}
