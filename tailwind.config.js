@@ -13,7 +13,7 @@ module.exports = {
     colors: {
       primary: '#1468BE',
       secondary: '#93C8FD',
-      'red-logo': '#FF0000',
+      'red-logo': '#ec534e',
     },
     extend: {
       backgroundImage: {
