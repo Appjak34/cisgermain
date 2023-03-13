@@ -67,3 +67,43 @@ a.btn {
 
 }
 
+
+.arrow {
+  text-align: center;
+  margin: 8% 0;
+}
+.animate-l {
+  -moz-animation: bounce_right 2s infinite;
+  -webkit-animation: bounce_right 2s infinite;
+  animation: bounce_right 2s infinite;
+}
+.animate-r {
+  -moz-animation: bounce_left 2s infinite;
+  -webkit-animation: bounce_left 2s infinite;
+  animation: bounce_left 2s infinite;
+}
+
+@keyframes bounce_right {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-20px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+}
+@keyframes bounce_left {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(+20px);
+  }
+  60% {
+    transform: translateX(+5px);
+  }
+}
+
+

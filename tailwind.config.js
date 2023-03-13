@@ -22,7 +22,6 @@ module.exports = {
         'img-conta': "url('assets/imgs/conta.jpeg')",
         'img-edu': "url('assets/imgs/edu.jpeg')",
         'img-pos': "url('assets/imgs/pos.jpeg')",
-        'img-pos': "url('assets/imgs/pos.jpeg')",
         'img-contact': "url('assets/imgs/contact.jpeg')",
       },
     },

@@ -7,19 +7,24 @@ import {NavHomeComponent} from "./widgets/nav-home/nav-home.component";
 import {ButtonModule} from "primeng/button";
 import {RippleModule} from "primeng/ripple";
 import {SwiperModule} from "swiper/angular";
+import {OfertaComponent} from "./widgets/oferta/oferta.component";
 
 
 @NgModule({
   declarations: [
     HomeComponent,
     NavHomeComponent,
+    OfertaComponent,
   ],
-    imports: [
-        CommonModule,
-        HomeRoutingModule,
-        ButtonModule,
-        RippleModule,
-        SwiperModule
-    ]
+  imports: [
+    CommonModule,
+    HomeRoutingModule,
+    ButtonModule,
+    RippleModule,
+    SwiperModule,
+  ],
+  exports:[
+    OfertaComponent
+  ]
 })
 export class HomeModule { }
