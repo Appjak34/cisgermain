@@ -8,6 +8,7 @@ import {ButtonModule} from "primeng/button";
 import {RippleModule} from "primeng/ripple";
 import {SwiperModule} from "swiper/angular";
 import {OfertaComponent} from "./widgets/oferta/oferta.component";
+import {NgxParallaxScrollModule} from "ngx-parallax-scroll";
 
 
 @NgModule({
@@ -16,13 +17,14 @@ import {OfertaComponent} from "./widgets/oferta/oferta.component";
     NavHomeComponent,
     OfertaComponent,
   ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    ButtonModule,
-    RippleModule,
-    SwiperModule,
-  ],
+    imports: [
+        CommonModule,
+        HomeRoutingModule,
+        ButtonModule,
+        RippleModule,
+        SwiperModule,
+        NgxParallaxScrollModule,
+    ],
   exports:[
     OfertaComponent
   ]

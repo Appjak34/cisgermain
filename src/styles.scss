@@ -10,13 +10,13 @@
   @font-face {
     font-family: "Basique";
     src: local("Basique Pro Regular"), local("Basique-Pro-Regular"),
-      url("./assets/fonts/Basique_3.ttf") format("truetype");
+    url("./assets/fonts/Basique_3.ttf") format("truetype");
   }
 
   @font-face {
     font-family: "Geometry";
     src: local("Geometry"), local("Geometry"),
-      url("./assets/fonts/Geometry.ttf") format("truetype");
+    url("./assets/fonts/Geometry.ttf") format("truetype");
   }
 }
 
@@ -64,11 +64,13 @@ a.btn {
   text-align: center;
   margin: 8% 0;
 }
+
 .animate-l {
   -moz-animation: bounce_right 2s infinite;
   -webkit-animation: bounce_right 2s infinite;
   animation: bounce_right 2s infinite;
 }
+
 .animate-r {
   -moz-animation: bounce_left 2s infinite;
   -webkit-animation: bounce_left 2s infinite;
@@ -90,6 +92,7 @@ a.btn {
     transform: translateX(-5px);
   }
 }
+
 @keyframes bounce_left {
   0%,
   20%,
@@ -107,6 +110,21 @@ a.btn {
 }
 
 .full-screen {
-  height: 100vh;
-  height: 100svh;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.swiper-button-prev {
+  @apply absolute top-0 left-0 w-6 h-full z-10 bg-no-repeat bg-center cursor-pointer;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ec534e'%2F%3E%3C%2Fsvg%3E") !important;
+}
+
+.swiper-button-next {
+  @apply absolute top-0 right-0 w-6 h-full z-10 bg-no-repeat bg-center cursor-pointer;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ec534e'%2F%3E%3C%2Fsvg%3E") !important;
+}
+
+.oferta .swiper-button-next ,
+.oferta .swiper-button-prev {
+  @apply w-12;
 }
