@@ -19,3 +19,12 @@
   background: #ddd;
   color: black;
 }
+
+.title-filosofia-cards {
+
+@layer {
+  @apply text-2xl text-left pb-2  font-bold tracking-[.5rem];
+}
+
+}
+

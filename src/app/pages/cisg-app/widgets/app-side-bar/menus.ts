@@ -46,4 +46,14 @@ export const studentMenu: AppSideBarItem[] = [
     icon: 'fa-books',
     path: '/admin/library',
   },
+  {
+    name: 'Actividades',
+    icon: 'fa-files',
+    path: '/admin/activities'
+  },
+  {
+    name: 'Calificaciones',
+    icon: 'fa-hundred-points',
+    path: '/admin/rating'
+  },
 ]

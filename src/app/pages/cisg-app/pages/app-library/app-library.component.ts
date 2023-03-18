@@ -4,6 +4,7 @@ import {LibraryService} from "../../services/library.service";
 import {Book} from "../../../../models/book";
 import {map, Observable} from "rxjs";
 import {PaginationService} from "../../utils/pagination.service";
+import {UserTypesEnum} from "../../../../models/enums";
 
 
 @Component({
@@ -36,6 +37,10 @@ export class AppLibraryComponent implements OnInit {
 
   async deleteBook(book: Book, index: number) {
     await this._libraryService.deleteFirestore(book, index)
+  }
+
+  get isUserAdmin (){
+    return this._libraryService.user.type == UserTypesEnum.admin
   }
 
 

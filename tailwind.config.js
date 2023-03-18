@@ -16,8 +16,10 @@ module.exports = {
       'red-logo': '#ec534e',
     },
     extend: {
+      important: true,
       backgroundImage: {
         'portada': "url('assets/imgs/portada.png')",
+        'portada-mobile': "url('assets/imgs/portada_mobile.jpeg')",
         'p-1': "url('assets/imgs/p-1.jpeg')",
         'img-conta': "url('assets/imgs/conta.jpeg')",
         'img-edu': "url('assets/imgs/edu.jpeg')",

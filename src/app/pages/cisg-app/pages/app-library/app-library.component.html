@@ -25,7 +25,7 @@
                 </div>
               </a>
 
-              <button (click)="deleteBook(book,i)" type="button"
+              <button *ngIf="isUserAdmin" (click)="deleteBook(book,i)" type="button"
                       class=" border border-red-700 bg-red-700
                   absolute -top-2 -right-2
                   transition ease-in-out duration-200

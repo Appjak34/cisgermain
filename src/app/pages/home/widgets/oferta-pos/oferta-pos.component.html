@@ -1,0 +1,180 @@
+<div  class="bg-img-pos relative h-full  my-8  bg-cover bg-center flex flex-col md:flex-row  px-8 md:px-14 full-screen">
+
+
+  <div class="z-0 absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-primary  to-transparent ..."></div>
+
+  <div  *ngIf="btns"  class="relative z-10 w-full pt-24 md:hidden">
+    <img [src]="'assets/posgrado.svg'" alt="">
+    <div  class="flex flex-col space-y-2 pt-4 ">
+      <div class=" relative z-10 w-full">
+        <button (click)="see_info()" class=" bg-white p-3 px-8 block rounded-full text-primary font-bold">Leer mas...</button>
+      </div>
+      <div class=" relative z-10 w-full">
+        <button (click)="see_study_plan()" class="bg-red-logo p-3 px-8 block rounded-full text-white font-bold">Plan de Estudios</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative z-10 w-full pt-24 hidden md:block">
+    <img [src]="'assets/posgrado.svg'" alt="">
+    <div *ngIf="btns"    class="flex flex-col space-y-2 pt-4 ">
+      <div class=" relative z-10 w-full">
+        <button (click)="see_info()" class=" bg-white p-3 px-8 block rounded-full text-primary font-bold">Leer mas...</button>
+      </div>
+      <div class=" relative z-10 w-full">
+        <button (click)="see_study_plan()" class="bg-red-logo p-3 px-8 block rounded-full text-white font-bold">Plan de Estudios</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="w-full md:px-10" *ngIf="info || study_plan">
+    <div *ngIf="info" class="relative z-10  w-full  bg-white  mt-10 rounded overflow-hidden text-justify p-4 md:p-10 text-white">
+      <div class="w-full bg-white text-primary text-lg cursor-pointer mb-4" (click)="back()">
+        <i class="fa-solid fa-chevron-left text-xl"></i> Regresar
+      </div>
+
+      <accordion [collapsing]="true">
+        <accordion-item title="Perfil de ingreso">
+          <ng-template accordionContent>
+            <div class="p-4">
+              El aspirante a cursar la Maestría en Administración de Negocios deberá ser una persona preocupada por las problemáticas de organización, dirección, económicas y financieras que
+              acontecen dentro de los Negocios u organizaciones públicas y privadas a nivel nacional e internacional. <br>
+              Tendrá conocimientos básicos de planeación, organización, dirección, supervisión, economía, estadística y matemáticas. <br>
+              Deberá ser una persona analítica, reflexiva, crítica y comprometida con el trabajo para obtener los mejores resultados con apego a la justicia, honestidad, responsabilidad e
+              innovación <br>
+
+            </div>
+          </ng-template>
+        </accordion-item>
+        <accordion-item title="Perfil de egreso">
+          <ng-template accordionContent>
+            <div class="p-4">
+              Al finalizar los egresados de la Maestría en Administración de Negocios tendrán las competencias, conocimientos, habilidades, destrezas y actitudes para difundir la cultura de la
+              administración pública, aplicándolas en los diferentes tipos de organizaciones, en respuesta a las exigencias del incierto y cambiante entorno regional, municipal, estatal, nacional e
+              internacional; estarán preparados para proyectar y desarrollar principios de gestión, planes estratégicos integrales, diagnósticos y organizacionales que garanticen el funcionamiento
+              operativo eficiente de las organizaciones, manteniéndolas activas y actualizadas en la nueva era digital bajo los nuevos esquemas de la administración y de los paradigmas de las
+              organizaciones o negocios siempre cambiantes.
+            </div>
+          </ng-template>
+        </accordion-item>
+
+        <accordion-item title="Habilidades">
+          <ng-template accordionContent>
+            <div class="p-4">
+              <span>&#x25cf;</span> Expresión Oral y Escrita <br>
+              <span>&#x25cf;</span> Segunda Lengua<br>
+              <span>&#x25cf;</span> Para la aplicación de estrategias basadas en las TICs.<br>
+              <span>&#x25cf;</span> Para la solución de problemas en el ámbito de la administración.<br>
+              <span>&#x25cf;</span> De comunicación y empatía para el desarrollo óptimo de su labor en la atención y cuidado de las personas en ambientes privados, públicos, regionales, nacionales e internacionales.<br>
+              <span>&#x25cf;</span> Para la evaluación del estado legal de los individuos y de los negocios o empresas.<br>
+              <span>&#x25cf;</span> Para la investigación y uso adecuado de la tecnología en el área de la Administración Pública. <br>
+              <span>&#x25cf;</span> Para el manejo de conceptos y métodos referentes al ámbito de la administración, la economía, la contabilidad y el derecho. <br>
+              <span>&#x25cf;</span> Para la administración y gestión de áreas empresariales.<br>
+              <span>&#x25cf;</span> Para adaptarse a nuevas maneras de pensar, comportarse e interactuar. <br>
+              <span>&#x25cf;</span> Para gestionar las reacciones ante estereotipos y prejuicios adquiridos.<br>
+
+
+            </div>
+          </ng-template>
+        </accordion-item>
+
+      </accordion>
+
+      <br>
+      <br>
+      <div class="font-bold text-center"></div>
+      <br>
+
+
+    </div>
+    <div *ngIf="study_plan" class="relative z-10  w-full  bg-red-logo   mt-10 rounded overflow-hidden text-justify p-4 md:p-10 text-white">
+      <div class="w-full  text-primary text-lg cursor-pointer mb-4 text-white" (click)="back()">
+        <i class="fa-solid fa-chevron-left text-xl text-white"></i> Regresar
+      </div>
+
+      <div class="font-bold text-xl text-center">Plan de Estudios</div>
+      <accordion [collapsing]="true" class="uppercase">
+        <accordion-item title="Área Básica">
+          <ng-template accordionContent>
+            <div class="p-4">
+              <div class=""><span>&#x25cf;</span> Contabilidad I y II</div>
+              <div class=""><span>&#x25cf;</span> Proceso Administrativo</div>
+              <div class=""><span>&#x25cf;</span> Matemáticas Financieras</div>
+              <div class=""><span>&#x25cf;</span> Introducción al Estudio del Derecho</div>
+              <div class=""><span>&#x25cf;</span> Derecho Constitucional y Administrativo</div>
+              <div class=""><span>&#x25cf;</span> Estadística Inferencial </div>
+              <div class=""><span>&#x25cf;</span> Comunicación Oral y Escrita</div>
+              <div class=""><span>&#x25cf;</span> Introducción a la Economía</div>
+              <div class=""><span>&#x25cf;</span> Problemas Económicos de México</div>
+              <div class=""><span>&#x25cf;</span> Mercadotecnia</div>
+              <div class=""><span>&#x25cf;</span> Metodología de la Investigación</div>
+
+            </div>
+          </ng-template>
+        </accordion-item>
+
+        <accordion-item title="Área Formativas">
+          <ng-template accordionContent>
+            <div class="p-4">
+              <div class=""><span>&#x25cf;</span> Contabilidad III</div>
+              <div class=""><span>&#x25cf;</span> Macroeconomía</div>
+              <div class=""><span>&#x25cf;</span> Contabilidad de Sociedades</div>
+              <div class=""><span>&#x25cf;</span> Procesos Administrativo II</div>
+              <div class=""><span>&#x25cf;</span> Costos II y III</div>
+              <div class=""><span>&#x25cf;</span> Matemáticas Aplicadas a los Negocios</div>
+              <div class=""><span>&#x25cf;</span> Planeación estratégica</div>
+              <div class=""><span>&#x25cf;</span> Finanzas Internacionales</div>
+              <div class=""><span>&#x25cf;</span> Estadística Aplicada a los Negocios</div>
+              <div class=""><span>&#x25cf;</span> Derecho Fiscal</div>
+              <div class=""><span>&#x25cf;</span> Presupuestos</div>
+              <div class=""><span>&#x25cf;</span> Seminario de Tesis</div>
+              <div class=""><span>&#x25cf;</span> Tecnologías de Información en las Organizaciones I y II</div>
+              <div class=""><span>&#x25cf;</span> Software contable y administrativo I y II</div>
+              <div class=""><span>&#x25cf;</span> Finanzas</div>
+              <div class=""><span>&#x25cf;</span> Microeconomía</div>
+              <div class=""><span>&#x25cf;</span> Seguridad Social I y II</div>
+
+            </div>
+          </ng-template>
+        </accordion-item>
+
+        <accordion-item title="Área Especializada/Práctica">
+          <ng-template accordionContent>
+            <div class="p-4">
+
+              <div class=""><span>&#x25cf;</span> Economía Internacional</div>
+              <div class=""><span>&#x25cf;</span> Estructuras Organizacionales</div>
+              <div class=""><span>&#x25cf;</span> Formulación y Evaluación de Proyectos de Inversión</div>
+              <div class=""><span>&#x25cf;</span> Investigación de Mercados I y II</div>
+              <div class=""><span>&#x25cf;</span> Relaciones Públicas</div>
+              <div class=""><span>&#x25cf;</span> Mercado de Valores</div>
+              <div class=""><span>&#x25cf;</span> Finanzas II y III</div>
+              <div class=""><span>&#x25cf;</span> Psicología industrial</div>
+              <div class=""><span>&#x25cf;</span> Negociación</div>
+            </div>
+
+          </ng-template>
+        </accordion-item>
+
+        <accordion-item title="Área Complementaria">
+          <ng-template accordionContent>
+            <div class="p-4">
+              <div class=""><span>&#x25cf;</span> Comunicación Oral y Escrita</div>
+              <div class=""><span>&#x25cf;</span> Inglés I, II y III</div>
+              <div class=""><span>&#x25cf;</span> Comunicación Administrativa Oral y Escrita</div>
+              <div class=""><span>&#x25cf;</span> Relaciones Públicas</div>
+              <div class=""><span>&#x25cf;</span> Mercadotecnia Educativa</div>
+            </div>
+          </ng-template>
+        </accordion-item>
+
+      </accordion>
+
+
+    </div>
+  </div>
+
+
+</div>

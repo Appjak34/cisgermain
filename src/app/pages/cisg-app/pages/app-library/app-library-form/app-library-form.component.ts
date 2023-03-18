@@ -41,6 +41,10 @@ export class AppLibraryFormComponent {
   }
 
   async upload() {
+    if(!this.book.name||!this.book.educational_service || !this.uploadedFiles.length ){
+      this._libraryService.errorForm()
+      return;
+    }
     this.book.created = Timestamp.now()
     await this._libraryService.uploadBook(this.book, this.uploadedFiles[0])
   }

@@ -19,6 +19,7 @@ import {OPS} from "pdfjs-dist";
 import constructPath = OPS.constructPath;
 import {AngularFirestore} from "@angular/fire/compat/firestore";
 import {PaginationService} from "../utils/pagination.service";
+import {AuthServiceService} from "../../../services/auth.service.service";
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +35,7 @@ export class LibraryService {
 
   constructor(private readonly _storageService: StorageService,
               private firestore: Firestore,
+              private authServiceService: AuthServiceService,
               private db: AngularFirestore,
               private _alertService: AlertService,
               private _paginationService: PaginationService,
@@ -46,10 +48,15 @@ export class LibraryService {
     this.initPaginate()
   }
 
+  get user() {
+    return this.authServiceService.user
+  }
+
   initBookList() {
     this.bookList$ = this._paginationService.data
   }
-  initPaginate(){
+
+  initPaginate() {
     this._paginationService.init('library', 'created', {reverse: false})
   }
 
@@ -57,8 +64,8 @@ export class LibraryService {
     this._paginationService.more();
   }
 
-  errorForm(){
-    this._alertService.warning('Campos obligatorios',' Hay campos vacios')
+  errorForm() {
+    this._alertService.warning('Campos obligatorios', ' Hay campos vacios')
   }
 
   async deleteFirestore(book: Book, index: number) {
@@ -69,6 +76,8 @@ export class LibraryService {
         await this._storageService.delete(this._collection, book.url_PDF)
         await deleteDoc(doc(this._collectionRef, book.id));
         this._paginationService.deleteDoc(index)
+        this._loaderService.loading = false
+      }, () => {
         this._loaderService.loading = false
       })
     } catch (e) {

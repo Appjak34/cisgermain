@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {AppLibraryComponent} from "./app-library.component";
 import {AppLibraryFormComponent} from "./app-library-form/app-library-form.component";
 import {PdfViewerComponent} from "../../utils/pdf-viewer/pdf-viewer.component";
+import {AdminGuard} from "../../../../guards/admin.guard";
 
 const routes: Routes = [
 
@@ -12,7 +13,8 @@ const routes: Routes = [
   },
   {
     path: 'add',
-    component: AppLibraryFormComponent
+    component: AppLibraryFormComponent,
+    canActivate: [AdminGuard]
   },
   {
     path: 'book/:id',

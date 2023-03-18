@@ -1,13 +1,13 @@
 <aside [class.translate-x-0]="navOpen"
-       class="fixed top-0 left-0 z-40 w-full h-full transition-transform -translate-x-full  pr-[25%]">
-  <div class="h-full overflow-hidden bg-primary">
+       class="fixed top-0 left-0 z-40 w-full h-full transition-transform -translate-x-full  pr-[25%] ">
+  <div class="h-full overflow-hidden bg-primary md:max-w-md">
     <ul class="flex space-y-10 flex-col justify-center h-full text-left px-10">
       <li (click)="scroll(inicio)" class="text-xl font-light text-white">Inicio</li>
-      <li (click)="scroll(nosotros)" class="text-xl font-light text-white">¿Quienes somos?</li>
+      <li (click)="scroll(nosotros)" class="text-xl font-light text-white">¿Quiénes somos?</li>
       <li (click)="scroll(filosofia)" class="text-xl font-light text-white">Filosofía</li>
       <li (click)="scroll(oferta)" class="text-xl font-light text-white ">Oferta Educativa</li>
       <li (click)="scroll(servicios)" class="text-xl font-light text-white">Servicios</li>
-      <li (click)="scroll(inicio)" class="text-xl font-light text-white">Galeria</li>
+      <li (click)="scroll(gallery)" class="text-xl font-light text-white">Galeria</li>
       <!-- <li (click)="scroll(inicio)" class="text-xl font-light text-white">Calendario</li> -->
       <li (click)="scroll(contacto)" class="text-xl font-light text-white">Contacto</li>
       <a href="/login" class="text-xl font-light text-white">Ingresar</a>
@@ -15,10 +15,11 @@
   </div>
 </aside>
 
-<div class="h-full">
+<div class="h-full ">
 
 
   <!-- HOME -->
+  <!--
   <section class="relative full-screen overflow-hidden sm:hidden">
     <div class=" absolute top-0 right-0 left-0 bottom-0 w-full h-full z-0 flex justify-center items-center">
       <div class="video_logo w-32 animate-bounce">
@@ -27,7 +28,7 @@
       </div>
     </div>
     <video class="relative object-cover  z-10" autoplay muted loop playsinline id="myVideo" [defaultMuted]="true">
-      <source src="assets/video/home_vertical_vid.mov" type="video/mp4">
+      <source src="assets/video/home_vertical_vid.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
     <div class=" absolute top-0 right-0 left-0 bottom-0 w-full h-full bg-black bg-opacity-5 z-20"></div>
@@ -41,16 +42,16 @@
         <a href="https://instagram.com/ci.sophiegermain?igshid=YmMyMTA2M2Y="
            class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i
           class="fa-brands fa-instagram"></i></a>
-        <div class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i
-          class="fa-brands fa-twitter"></i></div>
       </div>
 
     </div>
   </section>
-  <section class="relative full-screen overflow-hidden hidden sm:block bg-portada bg-cover  bg-center">
+  -->
+  <section class="relative full-screen overflow-hidden  bg-portada-mobile md:bg-portada bg-cover  bg-center flex items-start max-md:pt-32 md:items-center ">
+    <div class="z-0 absolute top-0 left-0 right-0 bottom-0 bg-black opacity-20 w-full md:hidden"></div>
 
-    <div class="flex items-center h-full px-8">
-      <div class="icon">
+    <div class="flex items-center h-full px-10 relative z-10 max-w-md:max-w-xs   max-w-md:mx-auto">
+      <div class="icon" >
         <img src="assets/LOGO.svg" alt="">
       </div>
     </div>
@@ -65,8 +66,8 @@
         <a href="https://instagram.com/ci.sophiegermain?igshid=YmMyMTA2M2Y="
            class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i
           class="fa-brands fa-instagram"></i></a>
-        <div class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i
-          class="fa-brands fa-twitter"></i></div>
+
+
       </div>
 
     </div>
@@ -79,16 +80,17 @@
 
     <div class="overflow-hidden max-h-96">
       <img ngxParallaxScroll
-        [parallaxSpeed]='0.06'
-        [parallaxSmoothness]='.1'
-        [parallaxDirection]='"reverse"'
-        [parallaxTimingFunction]='"linear"'
-        [parallaxThrottleTime]="20"
-        class="jarallax-img object-cover bg-center hidden md:block " src="assets/portada-12.png" alt="">
+           [parallaxSpeed]='0.06'
+           [parallaxSmoothness]='.1'
+           [parallaxDirection]='"reverse"'
+           [parallaxTimingFunction]='"linear"'
+           [parallaxThrottleTime]="20"
+           class="jarallax-img object-cover bg-center hidden md:block " src="assets/portada-12.png" alt="">
       <img class="jarallax-img object-cover bg-center md:hidden block " src="assets/portada-1.png" alt="">
     </div>
 
     <div
+
       ngxParallaxScroll
       [parallaxSpeed]='0.06'
       [parallaxSmoothness]='.1'
@@ -97,13 +99,14 @@
       [parallaxThrottleTime]="20"
       class="px-10 text-justify font-light text-base xl:text-lg text-white flex flex-col gap-6 lg:items-center">
 
-      <p
+      <p data-aos="fade-up" data-aos-duration="3000"
         class="lg:max-w-[50%]">En Centro Integral Sophie Germain S.C., tenemos experiencia de más de 15 años (desde 2008), ofrecemos servicios educativos de nivel Bachillerato, Superior y Posgrados,
-        en la región centro del Estado de Puebla. <br> <br> Nos manifestamos como una organización integrada y formada por profesionistas y empresarias poblanas, dispuestas y comprometidas a realizar su
+        en la región centro del Estado de Puebla. <br> <br> Nos manifestamos como una organización integrada y formada por profesionistas y empresarias poblanas, dispuestas y comprometidas a realizar
+        su
         aportación a la sociedad con gran sentido ético, corresponsabilidad social, así como visión de transformar seres humanos a través de una educación de calidad.</p>
 
-      <p class="lg:max-w-[50%] mb-10">
-        Somos una institución poblana por origen y como tal, nos declaramos como parte de su historia educativa. Ejercemos con plena libertad el derecho que nos corresponde en la historia del
+      <p  data-aos="fade-up" data-aos-duration="3000" class="lg:max-w-[50%] mb-10">
+        Ejercemos con plena libertad el derecho que nos corresponde en la historia del
         pensamiento de México y estamos dispuestos a asumir un liderazgo intelectual y moral con todas las consecuencias que implica por el bien de la comunidad educativa del Centro Integral Sophie
         Germain S.C
       </p>
@@ -114,16 +117,16 @@
   <section class="relative  bg-white md:flex md:flex-row-reverse md:items-center" id="js-target" #nosotros>
 
     <div class="bg-white md:h-full md:w-3/5 ">
-      <img class="object-fill min-h-full md:ml-auto" src="assets/p-2.png" alt="">
+      <img  data-aos="fade-left" data-aos-duration="3000" class="object-fill min-h-full md:ml-auto" src="assets/p-2.png" alt="">
     </div>
 
     <div class="h- md:h-full md:w-2/5 md:flex md:flex-col md:items-center md:justify-center overflow-hidden">
 
-      <div class="text-primary pt-4 text-6xl md:text-6xl xl:text-8xl font-bold text-center font-geometry ">
-        ¿Quienes somos?
+      <div data-aos="fade-right" data-aos-duration="3000" class="text-primary pt-4 text-5xl md:text-5xl xl:text-7xl font-bold text-center font-geometry ">
+        ¿Quiénes somos?
       </div>
 
-      <div class="text-justify py-2 md:py-6 px-8 lg:px-12 text-sm lg:text-base text-primary space-y-4">
+      <div data-aos="fade-right" data-aos-duration="2500" class="text-justify py-2 md:py-6 px-8 lg:px-12 text-sm lg:text-base text-primary space-y-4">
         <p>
           Centro Integral Sophie Germain S.C., es un centro educativo que nace bajo la necesidad de tener una
           institución
@@ -147,11 +150,12 @@
 
     <div class="lg:max-w-2xl lg:m-auto  px-8  ">
       <div class="py-8 space-y-4 md:w-1/2 md:flex md:flex-col md:items-center md:justify-center lg:max-w-3xl "></div>
-      <h2 class="text-primary text-6xl md:text-6xl xl:text-8xl font-bold font-geometry">
+      <h2 data-aos="fade-up" data-aos-duration="3000" class="text-primary text-6xl md:text-6xl xl:text-8xl font-bold font-geometry">
         Filosofía
       </h2>
 
-      <p class="text-justify py-2 md:py-6 text-sm lg:text-base text-primary space-y-4">
+
+      <p  data-aos="fade-right" data-aos-duration="3000" class="text-justify py-2 md:py-6 text-sm lg:text-base text-primary space-y-4">
         Para esta “Generación del Conocimiento”, como es reconocida en el medio pedagógico, a los alumnos que formarán
         parte de las futuras generaciones de mexicanos, consideramos como nuestros
         principios básicos al “Aprender a Ser”, el “Aprender a Conocer”, el “Aprender a Hacer” y el “Aprender a vivir
@@ -160,59 +164,85 @@
     </div>
 
 
-    <div class="px-8 flex items-center w-full md:w-1/2  md:flex md:items-center">
-      <div class="bg-primary w-full rounded-2xl p-4 overflow-hidden lg:max-w-2xl lg:m-auto ">
+    <div class="flex py-10 md:py-0 items-center w-full md:w-1/2   md:flex md:items-center">
+      <div data-aos="zoom-out-down" data-aos-duration="3000"  class="bg-primary w-full rounded-2xl overflow-hidden lg:max-w-2xl lg:m-auto  md:pb-8">
 
         <swiper
           [navigation]="true"
           class="h-[95%] cursor-move" [slidesPerView]="1" [spaceBetween]="10" [centeredSlides]="true">
 
           <ng-template swiperSlide class="rounded-lg  ">
-            <div class="rounded-xl bg-primary text-white pt-14  px-8">
-              <div class="title text-2xl text-left pb-2">MISIÓN</div>
-              <div class="text-justify">Somos una institución educativa de nivel superior organizada para contribuir al
-                desarrollo integral de las personas, graduando a estudiantes en nivel medio
-                superior,
-                y a
-                profesionistas en el nivel superior y posgrados brindando un servicio de alta calidad a bajo costo.
+            <div class="rounded-xl bg-primary text-white  pt-6 px-8">
+              <div class="title-filosofia-cards">MISIÓN</div>
+              <div class="text-justify">Somos una institución educativa de nivel superior organizada para contribuir al desarrollo integral de las personas, graduando a estudiantes en nivel medio
+                superior, y a profesionistas en el nivel superior y posgrados brindando un servicio de alta calidad a bajo costo.
               </div>
             </div>
 
           </ng-template>
           <ng-template swiperSlide class="rounded-lg ">
-            <div class="rounded-xl bg-primary text-white pt-14 px-8">
-              <div class="title text-2xl text-left pb-2">VISIÓN</div>
-              <div class="text-justify">Consolidar a nuestra institución educativa como una organización dedicada a la
-                formación académica de profesionistas con un alto nivel competitivo. Facilitando el
-                acceso a la formación académica debidamente estructurada, con asesorías personalizadas y horarios
-                flexibles. Buscamos que los alumnos encuentren apoyo en el transcurso del aprendizaje y
-                que en este proceso creen sentido de servicio a la sociedad.
+            <div class="rounded-xl bg-primary text-white  pt-6 px-8">
+              <div class="title-filosofia-cards">VISIÓN</div>
+              <div class="text-justify">Consolidar a nuestra institución educativa como una organización dedicada a la formación académica de profesionistas con un alto nivel competitivo. <br> <br>
+                Facilitando el acceso a la formación académica debidamente estructurada, con asesorías personalizadas y horarios flexibles.<br> <br> Buscamos que los alumnos encuentren apoyo en el
+                transcurso del aprendizaje y que en este proceso creen sentido de servicio a la sociedad.
               </div>
             </div>
           </ng-template>
           <ng-template swiperSlide class="rounded-lg ">
-            <div class="rounded-xl bg-primary text-white pt-14  px-8">
-              <div class="title text-2xl text-left pb-2">VALORES</div>
-              <div class="text-justify overflow-scroll">
-                El Centro Integral Sophie Germain S.C. promueve valores (cualidad o conjunto de cualidades de una
-                persona,
-                por cuya virtud es apreciada), siendo éstos:
-                -Profesionalismo: asumida como la capacidad de responder ante los retos constantes del mercado laboral.
-                -Responsabilidad: entendida como el reconocimiento y la capacidad de asumir consecuencias en la
-                resolución
-                de problemas.
-                -Vocación: capacidad de identificar mis talentos y competencias para ponerlas al servicio de la sociedad
-                y
-                de mi profesión.
-                -Tolerancia: asumir con respeto las creencias, ideas y prácticas del otro.
-                -No discriminación; la garantía de igualdad entre seres humanos.
+            <div class="rounded-xl bg-primary text-white  pt-6 px-8">
+              <div class="title-filosofia-cards">VALORES</div>
+              <div class="text-justify">
+                El Centro Integral Sophie Germain S.C. promueve valores (cualidad o conjunto de cualidades de una persona, por cuya virtud es apreciada), siendo éstos:
+                <div class="py-2"></div>
+                <accordion [collapsing]="collapsing">
+                  <accordion-item title="Profesionalismo">
+                    <ng-template accordionContent>
+                      <div class="p-4">
+                        Asumida como la capacidad de responder ante los retos constantes del mercado laboral.
+                      </div>
+                    </ng-template>
+                  </accordion-item>
+                  <accordion-item title="Responsabilidad">
+                    <ng-template accordionContent>
+                      <div class="p-4">
+                        Entendida como el reconocimiento y la capacidad de asumir consecuencias en la
+                        resolución de problemas.
+                      </div>
+                    </ng-template>
+                  </accordion-item>
+
+                  <accordion-item title="Vocación">
+                    <ng-template accordionContent>
+                      <div class="p-4">
+                        Capacidad de identificar mis talentos y competencias para ponerlas al servicio de la sociedad y de mi profesión.
+                      </div>
+                    </ng-template>
+                  </accordion-item>
+                  <accordion-item title="Tolerancia">
+                    <ng-template accordionContent>
+                      <div class="p-4">
+                        Asumir con respeto las creencias, ideas y prácticas del otro.
+                      </div>
+                    </ng-template>
+                  </accordion-item>
+                  <accordion-item title="No discriminación">
+                    <ng-template accordionContent>
+                      <div class="p-4">
+                        La garantía de igualdad entre seres humanos.
+                      </div>
+                    </ng-template>
+                  </accordion-item>
+
+                </accordion>
+
 
               </div>
             </div>
           </ng-template>
           <ng-template swiperSlide class="rounded-lg ">
-            <div class="rounded-xl bg-primary text-white pt-14  px-8">
-              <div class="title text-2xl text-left pb-2">POLITICA DE CALIDAD</div>
+            <div class="rounded-xl bg-primary text-white  pt-6 px-8">
+              <div class="title-filosofia-cards">POLÍwqTICA DE CALIDAD</div>
               <div class="text-justify">
                 Trabajamos con procesos soportados por personal directivo, docente y administrativo ampliamente
                 calificados, comprometidos con la calidad y cultura de legalidad para lograr la
@@ -241,16 +271,17 @@
 
   </section>
   <!-- OFERTA  -->
-  <section class="h-full oferta" #oferta>
-    <swiper [slidesPerView]="1" [navigation]="true" class="h-full">
+  <section class=" oferta h" #oferta>
+    <swiper [slidesPerView]="1" [navigation]="true" class=""  [loop]=" true " [autoplay]="true">
       <ng-template swiperSlide>
-        <ea-oferta [bg_img]="'bg-img-conta'" [img_title]="'lic_conta.svg'"></ea-oferta>
+        <ea-oferta-conta></ea-oferta-conta>
       </ng-template>
       <ng-template swiperSlide>
-        <ea-oferta [bg_img]="'bg-img-edu'" [img_title]="'lic_educacion.svg'"></ea-oferta>
+
+        <ea-oferta-edu ></ea-oferta-edu>
       </ng-template>
       <ng-template swiperSlide>
-        <ea-oferta [bg_img]="'bg-img-pos'" [img_title]="'posgrado.svg'"></ea-oferta>
+        <ea-oferta-pos></ea-oferta-pos>
       </ng-template>
 
 
@@ -258,16 +289,16 @@
 
   </section>
   <!-- Servicios  -->
-  <section #servicios class="relative min-h-full py-20 px-8">
+  <section #servicios class="relative  pt-10">
     <div class=" font-geometry text-5xl text-primary text-center">Servicios</div>
 
-    <div class="">
+    <div class="md:max-w-4xl  lg:max-w-xl md:m-auto">
 
       <swiper [slidesPerView]="1" [spaceBetween]="20" [navigation]="true"
               class=" carousel aspect-w-16 aspect-h-9 relative ">
         <ng-template swiperSlide>
-          <div class="mx-12">
-            <div class="flex w-full justify-between py-8 ">
+          <div class="mx-6">
+            <div class="flex w-full justify-between py-8 capitalize">
               <div class="flex flex-col w-22 items-center">
                 <div class=" bg-red-logo text-white w-6 h-6 border rounded-full flex items-center justify-center text-xs">
                   1
@@ -323,21 +354,22 @@
           </div>
         </ng-template>
         <ng-template swiperSlide>
-          <div class="mx-12">
-            <div class="flex w-full justify-between py-8 ">
+          <div class="mx-6">
+            <div class="flex w-full justify-between py-8 capitalize">
               <div class="flex flex-col w-22 items-center">
                 <div
                   class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">
                   1
                 </div>
-                <div class="text-secondary text-sm">Estudiantiles</div>
+                <div class="text-primary text-sm">Estudiantiles</div>
               </div>
 
               <div class="flex flex-col w-22 items-center">
-                <div class=" bg-red-logo text-white w-6 h-6 border rounded-full flex items-center justify-center text-xs">
+                <div
+                  class=" bg-red-logo text-white w-6 h-6 border rounded-full flex items-center justify-center text-xs">
                   2
                 </div>
-                <div class="text-primary text-sm">Académicos</div>
+                <div class="text-secondary text-sm">Académicos</div>
               </div>
               <div class="flex flex-col w-22 items-center">
                 <div
@@ -370,15 +402,16 @@
                 <br>
                 <br>
                 Biblioteca: <br>
-                Contamos con una biblioteca presencial dentro de nuestras
+                Contamos con una biblioteca presencial dentro de nuestras instalaciones, y una biblioteca virtual dentro de nuestra plataforma en donde cada alumno puede leer, trabajar y/o descargar
+                todos los libros que le sean de utilidad.
               </div>
 
             </div>
           </div>
         </ng-template>
         <ng-template swiperSlide>
-          <div class="mx-12">
-            <div class="flex w-full justify-between py-8 ">
+          <div class="mx-6">
+            <div class="flex w-full justify-between py-8 capitalize">
               <div class="flex flex-col w-22 items-center">
                 <div
                   class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">
@@ -427,8 +460,8 @@
           </div>
         </ng-template>
         <ng-template swiperSlide>
-          <div class="mx-12">
-            <div class="flex w-full justify-between py-8 ">
+          <div class="mx-6">
+            <div class="flex w-full justify-between py-8 capitalize">
               <div class="flex flex-col w-22 items-center">
                 <div
                   class="border-primary bg-white text-primary w-6 h-6 border rounded-full flex items-center justify-center text-xs">
@@ -463,19 +496,17 @@
 
               <div class="py-10 px-4 text-white text-justify text-sm">
                 Requisitos: <br>
-                Llenar formato de beca vigente y pegar fotografía reciente tamaño infantil en el mismo.
-                Pagar la inscripción antes de entregar la documentación correspondiente.
-                Para licenciatura, copia de certificado del bachillerato, en caso de no tenerlo, presentar una constancia
-                de estudios con calificaciones de los seis semestres del bachillerato con
-                validez oficial, es decir, en hoja membretada y con el sello de la escuela de procedencia.
-                Para posgrado, copia del certificado de licenciatura.
-                Promedio mínimo general del bachillerato para licenciatura o la licenciatura para posgrado, de ocho punto
-                cinco (8.5).
-                Constancia reciente de ingresos (la cual será́ máximo de un mes anterior a la entrega de la solicitud).
-                Comprobante de domicilio actual (del mes en que se entrega la solicitud o el inmediato anterior).
-                Copia de la Clave Única de Registro de Población (CURP).
-                Presentar la solicitud de beca en los términos y plazos establecidos en la convocatoria emitida por la
-                universidad y anexar la documentación comprobatoria que se señale en la misma.
+                <span>&#x25cf;</span> Llenar formato de beca vigente y pegar fotografía reciente tamaño infantil en el mismo.<br>
+                <span>&#x25cf;</span> Pagar la inscripción antes de entregar la documentación correspondiente. <br>
+                <span>&#x25cf;</span> Para licenciatura, copia de certificado del bachillerato, en caso de no tenerlo, presentar una constancia de estudios con calificaciones de los seis semestres
+                del bachillerato con validez oficial, es decir, en hoja membretada y con el sello de la escuela de procedencia. <br>
+                <span>&#x25cf;</span> Para posgrado, copia del certificado de licenciatura. <br>
+                <span>&#x25cf;</span> Promedio mínimo general del bachillerato para licenciatura o la licenciatura para posgrado, de ocho punto cinco (8.5). <br>
+                <span>&#x25cf;</span> Constancia reciente de ingresos (la cual será́ máximo de un mes anterior a la entrega de la solicitud). <br>
+                <span>&#x25cf;</span> Comprobante de domicilio actual (del mes en que se entrega la solicitud o el inmediato anterior). <br>
+                <span>&#x25cf;</span> Copia de la Clave Única de Registro de Población (CURP). <br>
+                <span>&#x25cf;</span> Presentar la solicitud de beca en los términos y plazos establecidos en la convocatoria emitida por la universidad y anexar la documentación comprobatoria que se
+                señale en la misma.
 
               </div>
 
@@ -490,16 +521,27 @@
 
   </section>
 
+  <!-- Galeria -->
+
+  <section class="py-10" #gallery>
+    <div class=" font-geometry text-5xl text-primary text-center">Galeria</div>
+    <gallery [items]="images" [autoPlay]="true"></gallery>
+  </section>
+
+
   <!-- Contactanos -->
-  <section class="h-full relative bg-img-contact bg-cover bg-center flex items-center justify-center overflow-hidden"
+  <section class="h-full relative bg-img-contact bg-cover bg-center flex flex-col items-center justify-center overflow-hidden"
            #contacto>
-    <div class="z-0 absolute top-0 left-0 right-0 bottom-0 bg-primary opacity-70 "></div>
 
-    <div class="font-geometry text-2xl z-10 text-white pb-10">Que esperas para contactarnos!!</div>
+    <div class="flex-1 flex flex-col justify-center relative z-10">
+      <div class="font-geometry text-2xl z-10 text-white pb-10"> ¡Qué esperas para contactarnos!</div>
+      <a class="text-white text-2xl flex items-center" href="https://wa.me/2223902994" target="_blank"><img src="assets/whats.svg" alt=""> Chatea con nosotros</a>
+    </div>
 
-    <div class="z-10 absolute bottom-0 left-0 right-0 w-full">
-      <svg class="w-full|" width="750" height="287" viewBox="0 0 750 287" fill="none"
-           xmlns="http://www.w3.org/2000/svg">
+    <div class="z-0 absolute top-0 left-0 right-0 bottom-0 bg-primary opacity-40 w-full"></div>
+    <div class="z-10 w-full  ">
+
+      <svg class="w-full  -mb-24" height="287" viewBox="0 0 750 287" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M1618.83 248.629L1620.1 0.989258C1256.34 178.189 821.8 61.6992 513.09 31.7292C146.55 -3.85075 41.8299 143.199 -449.57 119.489C-614.36 111.539 -729.39 86.5392 -809.59 56.8192V248.629C-809.59 266.389 -786.67 280.929 -758.66 280.929H1567.9C1595.91 280.929 1618.83 266.389 1618.83 248.629Z"
           fill="#93C8FD"/>
@@ -510,17 +552,22 @@
           d="M1620.09 309.099V59.5293C1256.33 236.729 821.79 120.239 513.08 90.2693C146.54 54.6893 41.8199 201.739 -449.58 178.029C-614.36 170.079 -729.4 145.079 -809.59 115.359V309.099C-809.59 309.099 1620.1 308.489 1620.1 309.099H1620.09Z"
           fill="white"/>
       </svg>
-      <div class="absolute right-0 left-0 bottom-10 w-full z-30">
 
+      <div class="w-full z-30 bg-white flex flex-col space-y-2 items-center ">
+        <div class="max-w-sm m-auto flex flex-col pb-10">
+          <a href="tel:2228593924">Tel: 222 859 39 24</a>
+          <a href="tel:2227550341">Tel: 222 755 03 41</a>
+          <a class="text-primary" href="https://goo.gl/maps/bbRyFQxvMPXWkNCw7" target="_blank"><i class="fa-sharp fa-solid fa-location-dot"></i> RETORNO AHUEHUETE #41 AMALUCAN, PUEBLA.</a>
+        </div>
         <div class="flex space-x-4 justify-center ">
+
+
           <a href="https://www.facebook.com/cisophiegermain?mibextid=ZbWKwL"
              class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i
             class="fa-brands fa-facebook-f"></i></a>
           <a href="https://instagram.com/ci.sophiegermain?igshid=YmMyMTA2M2Y="
              class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i
             class="fa-brands fa-instagram"></i></a>
-          <div class="flex justify-center items-center p-2 w-12 h-12 bg-primary rounded-full text-white text-2xl"><i
-            class="fa-brands fa-twitter"></i></div>
         </div>
 
       </div>
@@ -529,9 +576,13 @@
   </section>
 
 
-  <div (click)="open()"
-       class="floating-btn fixed w-12 h-12 rounded bg-red-logo z-40 top-0 right-0 m-2 flex justify-center items-center">
+  <div *ngIf="!navOpen" (click)="open()"
+       class="cursor-pointer floating-btn fixed w-12 h-12 rounded bg-red-logo z-40 top-0 right-0 m-2 flex justify-center items-center">
     <i class="fa-duotone fa-bars text-3xl text-white"></i>
+  </div>
+  <div *ngIf="navOpen" (click)="open()"
+       class="cursor-pointer floating-btn fixed w-12 h-12 rounded bg-red-logo z-40 top-0 right-0 m-2 flex justify-center items-center">
+    <i class="fa-solid fa-xmark text-3xl text-white"></i>
   </div>
 
 </div>

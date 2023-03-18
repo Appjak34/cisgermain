@@ -1,0 +1,171 @@
+<div  class="bg-img-edu relative h-full  my-8  bg-cover bg-center flex flex-col md:flex-row  px-8 md:px-14 full-screen">
+
+
+  <div class="z-0 absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-primary  to-transparent ..."></div>
+
+
+  <div *ngIf="btns"  class="relative z-10 w-full pt-24 md:hidden">
+    <img  [src]="'assets/lic_educacion.svg'" alt="">
+    <div  class="flex flex-col space-y-2 pt-4 ">
+      <div class=" relative z-10 w-full">
+        <button (click)="see_info()" class=" bg-white p-3 px-8 block rounded-full text-primary font-bold">Leer mas...</button>
+      </div>
+      <div class=" relative z-10 w-full">
+        <button (click)="see_study_plan()" class="bg-red-logo p-3 px-8 block rounded-full text-white font-bold">Plan de Estudios</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative z-10 w-full pt-24 hidden md:block">
+    <img  [src]="'assets/lic_educacion.svg'" alt="">
+    <div *ngIf="btns"    class="flex flex-col space-y-2 pt-4 ">
+      <div class=" relative z-10 w-full">
+        <button (click)="see_info()" class=" bg-white p-3 px-8 block rounded-full text-primary font-bold">Leer mas...</button>
+      </div>
+      <div class=" relative z-10 w-full">
+        <button (click)="see_study_plan()" class="bg-red-logo p-3 px-8 block rounded-full text-white font-bold">Plan de Estudios</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="w-full md:px-10" *ngIf="info || study_plan">
+    <div *ngIf="info" class="relative z-10  w-full  bg-white  mt-10 rounded overflow-hidden text-justify p-4 md:p-10 text-white">
+      <div class="w-full bg-white text-primary text-lg cursor-pointer mb-4" (click)="back()">
+        <i class="fa-solid fa-chevron-left text-xl"></i> Regresar
+      </div>
+
+      <accordion [collapsing]="true">
+        <accordion-item title="Perfil de ingreso">
+          <ng-template accordionContent>
+            <div class="p-4">
+              El aspirante a cursar la licenciatura en Ciencias de la Educación deberá ser una persona preocupada por las problemáticas educativas de la sociedad que acontece dentro de la sociedad
+              mexicana, así como en las instituciones públicas y privadas a nivel nacional. Deberá contar con conocimientos básicos de historia, psicología, sociología, filosofía y matemáticas. <br>
+              Deberá ser una persona analítica, reflexiva, critica y comprometida con el trabajo por resultados. <br>
+              Contará como convicción ser una persona justa, honesta, responsable e innovadora. <br>
+            </div>
+          </ng-template>
+        </accordion-item>
+        <accordion-item title="Perfil de egreso">
+          <ng-template accordionContent>
+            <div class="p-4">
+              Al finalizar los egresados de la Licenciatura en CIENCIAS DE LA EDUCACIÓN tendrán las competencias (conocimientos, habilidades, destrezas y actitudes) para difundir la cultura de la Educación Integral, aplicado a los diferentes tipos de organizaciones humanas, en respuesta a las exigencias del incierto y cambiante entorno regional, municipal, estatal, nacional e internacional.
+              <br>
+              <br>
+              A su vez, estarán  preparados para gestionar la toma de decisiones acertadas y legales, para proyectar y desarrollar planes educativos estratégicos integrales, diagnósticos de entornos sociales variados y principios de gestión que garanticen el funcionamiento operativo eficiente de la sociedad en lo general, manteniéndolas activas y actualizadas en la nueva era de la innovación tecnológica y digital.
+              <br>
+              <br>
+              Todo esto bajo los nuevos esquemas de las Ciencias de la Educación y de los paradigmas de las sociedades y organizaciones humanas siempre cambiantes, la investigación y la tecnología educativa, a través de estudios teórico-prácticos e interdisciplinarios para que a través de dicha interacción exista una asimilación de la experiencia en las aulas, en beneficio de la sociedad.
+            </div>
+          </ng-template>
+        </accordion-item>
+
+        <accordion-item title="Habilidades">
+          <ng-template accordionContent>
+            <div class="p-4">
+              <span>&#x25cf;</span> Expresión Oral y Escrita <br>
+              <span>&#x25cf;</span> Segunda Lengua<br>
+              <span>&#x25cf;</span> Para la aplicación de estrategias basadas en las TICs.<br>
+              <span>&#x25cf;</span> Para la solución de problemas en el ámbito de la educación.<br>
+              <span>&#x25cf;</span> De comunicación y empatía para el desarrollo óptimo de su labor en la atención y cuidado de las personas en ambientes privados, públicos, regionales, nacionales e internacionales.<br>
+              <span>&#x25cf;</span> Para la evaluación del estado educativo de los individuos y de la sociedad.<br>
+              <span>&#x25cf;</span> Para la investigación y uso adecuado de la tecnología en el área de la Educación.<br>
+              <span>&#x25cf;</span> Para el manejo de conceptos y métodos referentes al ámbito de la educación pública, la administración escolar y el derecho.<br>
+              <span>&#x25cf;</span> Para la evaluación de procesos de enseñanza y aprendizaje.<br>
+              <span>&#x25cf;</span> Para adaptarse a nuevas maneras de pensar, comportarse e interactuar.<br>
+              <span>&#x25cf;</span> Para gestionar las reacciones ante estereotipos y prejuicios adquiridos.<br>
+
+
+            </div>
+          </ng-template>
+        </accordion-item>
+
+      </accordion>
+
+      <br>
+      <br>
+      <div class="font-bold text-center"></div>
+      <br>
+
+
+    </div>
+    <div *ngIf="study_plan" class="relative z-10  w-full  bg-red-logo   mt-10 rounded overflow-hidden text-justify p-4 md:p-10 text-white">
+      <div class="w-full  text-primary text-lg cursor-pointer mb-4 text-white" (click)="back()">
+        <i class="fa-solid fa-chevron-left text-xl text-white"></i> Regresar
+      </div>
+
+      <div class="font-bold text-xl text-center">Plan de Estudios</div>
+      <accordion [collapsing]="true" class="uppercase">
+        <accordion-item title="Áreas">
+          <ng-template accordionContent>
+            <div class="p-4 capitalize">
+              <div class=""><span>&#x25cf;</span> Básica</div>
+              <div class=""><span>&#x25cf;</span> Formativa</div>
+              <div class=""><span>&#x25cf;</span> Especializada/Práctica</div>
+              <div class=""><span>&#x25cf;</span> Complementarias</div>
+            </div>
+          </ng-template>
+        </accordion-item>
+        <accordion-item title="Área Básica">
+          <ng-template accordionContent>
+            <div class="p-4">
+              <div class=""><span>&#x25cf;</span> Historia de la Educación</div>
+              <div class=""><span>&#x25cf;</span> Derecho Fiscal</div>
+              <div class=""><span>&#x25cf;</span> Paradigmas en Psicología</div>
+              <div class=""><span>&#x25cf;</span> Sociología Educativa</div>
+              <div class=""><span>&#x25cf;</span> Filosofía de la Educación</div>
+              <div class=""><span>&#x25cf;</span> Marco Legal de la educación</div>
+
+            </div>
+          </ng-template>
+        </accordion-item>
+
+        <accordion-item title="Área Formativas">
+          <ng-template accordionContent>
+            <div class="p-4">
+              <div class=""><span>&#x25cf;</span> Planeación Estratégica</div>
+              <div class=""><span>&#x25cf;</span> Estructuras Organizacionales Educativas</div>
+              <div class=""><span>&#x25cf;</span> Estadística Aplicada a la Educación</div>
+              <div class=""><span>&#x25cf;</span> Ética Profesional</div>
+              <div class=""><span>&#x25cf;</span> Innovación Educativa</div>
+              <div class=""><span>&#x25cf;</span> TICs en educación</div>
+              <div class=""><span>&#x25cf;</span> Inglés</div>
+              <div class=""><span>&#x25cf;</span> Informática y Computación</div>
+            </div>
+          </ng-template>
+        </accordion-item>
+
+        <accordion-item title="Área Especializada/Práctica">
+          <ng-template accordionContent>
+            <div class="p-4">
+
+              <div class=""><span>&#x25cf;</span> Investigación Educativa</div>
+              <div class=""><span>&#x25cf;</span> Seminario de Tesis</div>
+
+            </div>
+
+          </ng-template>
+        </accordion-item>
+
+        <accordion-item title="Área Complementaria">
+          <ng-template accordionContent>
+            <div class="p-4">
+              <div class=""><span>&#x25cf;</span> Comunicación Oral y Escrita</div>
+              <div class=""><span>&#x25cf;</span> Inglés I, II y III</div>
+              <div class=""><span>&#x25cf;</span> Comunicación Administrativa Oral y Escrita</div>
+              <div class=""><span>&#x25cf;</span> Relaciones Públicas</div>
+              <div class=""><span>&#x25cf;</span> Mercadotecnia Educativa</div>
+            </div>
+          </ng-template>
+        </accordion-item>
+
+      </accordion>
+
+
+    </div>
+  </div>
+
+
+</div>
